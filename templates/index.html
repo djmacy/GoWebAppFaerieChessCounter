@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Faerie Chess Counter</title>
+    <style>
+        .column {
+            float: left;
+            width: 33%;
+        }
+
+        .column label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        .column input,
+        .column select {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<h1>Faerie Chess Counter</h1>
+<form action="/calculate" method="POST">
+    <div class="column">
+        <h3>Rank I selection:</h3>
+        <label>Pawns:</label>
+        <select name="pawn">
+            <option value=0>0</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7</option>
+            <option value=8>8</option>
+        </select><br>
+        <label>Peasants:</label>
+        <select name="peasant">
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+        </select><br>
+        <label>Soldiers:</label>
+        <select name="soldier">
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+        </select><br>
+    </div>
+
+    <div class="column">
+        <h3>Rank II selection:</h3>
+        <label>Rooks:</label>
+        <select name="rook">
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+        </select><br>
+        <label>Knights:</label>
+        <select name="knight">
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+        </select><br>
+        <label>Bishops:</label>
+        <select name="bishop">
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+        </select><br>
+        <label>Catapult:</label>
+        <select name="catapult">
+            <option value=0>0</option>
+            <option value=1>1</option>
+        </select><br>
+        <label>Chamberlain:</label>
+        <select name="chamberlain">
+            <option value=0>0</option>
+            <option value=1>1</option>
+        </select><br>
+        <label>Courtesan:</label>
+        <select name="courtesan">
+            <option value=0>0</option>
+            <option value=1>1</option>
+        </select><br>
+        <label>Herald:</label>
+        <select name="herald">
+            <option value=0>0</option>
+            <option value=1>1</option>
+        </select><br>
+        <label>Inquisitor:</label>
+        <select name="inquisitor">
+            <option value=0>0</option>
+            <option value=1>1</option>
+        </select><br>
+        <label>Lancer:</label>
+        <select name="lancer">
+            <option value=0>0</option>
+            <option value=1>1</option>
+        </select><br>
+        <label>Pontiff:</label>
+        <select name="pontiff">
+            <option value=0>0</option>
+            <option value=1>1</option>
+        </select><br>
+        <label>Thief:</label>
+        <select name="thief">
+            <option value=0>0</option>
+            <option value=1>1</option>
+        </select><br>
+        <label>Tower:</label>
+        <select name="tower">
+            <option value=0>0</option>
+            <option value=1>1</option>
+        </select><br>
+    </div>
+
+    <div class="column">
+        <h3>Rank III selection:</h3>
+        <label>Queen:</label>
+        <select name="queen">
+            <option value=0>0</option>
+            <option value=1>1</option>
+        </select><br>
+        <label>King:</label>
+        <select name="king">
+            <option value=0>0</option>
+            <option value=1>1</option>
+        </select><br>
+        <label>Jester:</label>
+        <select name="jester">
+            <option value=0>0</option>
+            <option value=1>1</option>
+        </select><br>
+        <label>Regent:</label>
+        <select name="regent">
+            <option value=0>0</option>
+            <option value=1>1</option>
+        </select><br>
+    </div>
+
+    <div class="column">
+        <h3>Difficulty:</h3>
+        <select name="difficulty">
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+    </div>
+
+    <br style="clear: both;"><br>
+
+    <input type="submit" value="Calculate Points">
+</form>
+</body>
+</html>
