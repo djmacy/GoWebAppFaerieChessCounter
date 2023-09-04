@@ -22,135 +22,267 @@
 </head>
 <body>
 <h1>Faerie Chess Counter</h1>
-<form action="/calculate" method="POST">
-    <div class="column">
-        <h3>Rank I selection:</h3>
-        <label>Pawns:</label>
-        <select name="pawn">
-            <option value=0>0</option>
-            <option value=4>4</option>
-            <option value=5>5</option>
-            <option value=6>6</option>
-            <option value=7>7</option>
-            <option value=8>8</option>
-        </select><br>
-        <label>Peasants:</label>
-        <select name="peasant">
-            <option value=0>0</option>
-            <option value=1>1</option>
-            <option value=2>2</option>
-        </select><br>
-        <label>Soldiers:</label>
-        <select name="soldier">
-            <option value=0>0</option>
-            <option value=1>1</option>
-            <option value=2>2</option>
-        </select><br>
-    </div>
+<div class="column">
+    <h3>Rank I selection:</h3>
+    <label>Pawns:</label>
+    <select id="pawn">
+        <option value=4>4</option>
+        <option value=5>5</option>
+        <option value=6>6</option>
+        <option value=7>7</option>
+        <option value=8>8</option>
+    </select><br>
+    <label>Peasants:</label>
+    <select id="peasant">
+        <option value=0>0</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+    </select><br>
+    <label>Soldiers:</label>
+    <select id="soldier">
+        <option value=0>0</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+    </select><br>
+    <div id = "rank1Label">Rank I Pieces Left: 4</div>
+</div>
 
-    <div class="column">
-        <h3>Rank II selection:</h3>
-        <label>Rooks:</label>
-        <select name="rook">
-            <option value=0>0</option>
-            <option value=1>1</option>
-            <option value=2>2</option>
-        </select><br>
-        <label>Knights:</label>
-        <select name="knight">
-            <option value=0>0</option>
-            <option value=1>1</option>
-            <option value=2>2</option>
-        </select><br>
-        <label>Bishops:</label>
-        <select name="bishop">
-            <option value=0>0</option>
-            <option value=1>1</option>
-            <option value=2>2</option>
-        </select><br>
-        <label>Catapult:</label>
-        <select name="catapult">
-            <option value=0>0</option>
-            <option value=1>1</option>
-        </select><br>
-        <label>Chamberlain:</label>
-        <select name="chamberlain">
-            <option value=0>0</option>
-            <option value=1>1</option>
-        </select><br>
-        <label>Courtesan:</label>
-        <select name="courtesan">
-            <option value=0>0</option>
-            <option value=1>1</option>
-        </select><br>
-        <label>Herald:</label>
-        <select name="herald">
-            <option value=0>0</option>
-            <option value=1>1</option>
-        </select><br>
-        <label>Inquisitor:</label>
-        <select name="inquisitor">
-            <option value=0>0</option>
-            <option value=1>1</option>
-        </select><br>
-        <label>Lancer:</label>
-        <select name="lancer">
-            <option value=0>0</option>
-            <option value=1>1</option>
-        </select><br>
-        <label>Pontiff:</label>
-        <select name="pontiff">
-            <option value=0>0</option>
-            <option value=1>1</option>
-        </select><br>
-        <label>Thief:</label>
-        <select name="thief">
-            <option value=0>0</option>
-            <option value=1>1</option>
-        </select><br>
-        <label>Tower:</label>
-        <select name="tower">
-            <option value=0>0</option>
-            <option value=1>1</option>
-        </select><br>
-    </div>
+<div class="column">
+    <h3>Rank II selection:</h3>
+    <label>Rooks:</label>
+    <select id="rook">
+        <option value=0>0</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+    </select><br>
+    <label>Knights:</label>
+    <select id="knight">
+        <option value=0>0</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+    </select><br>
+    <label>Bishops:</label>
+    <select id="bishop">
+        <option value=0>0</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+    </select><br>
+    <label>Catapult:</label>
+    <select id="catapult">
+        <option value=0>0</option>
+        <option value=1>1</option>
+    </select><br>
+    <label>Chamberlain:</label>
+    <select id="chamberlain">
+        <option value=0>0</option>
+        <option value=1>1</option>
+    </select><br>
+    <label>Courtesan:</label>
+    <select id="courtesan">
+        <option value=0>0</option>
+        <option value=1>1</option>
+    </select><br>
+    <label>Herald:</label>
+    <select id="herald">
+        <option value=0>0</option>
+        <option value=1>1</option>
+    </select><br>
+    <label>Inquisitor:</label>
+    <select id="inquisitor">
+        <option value=0>0</option>
+        <option value=1>1</option>
+    </select><br>
+    <label>Lancer:</label>
+    <select id="lancer">
+        <option value=0>0</option>
+        <option value=1>1</option>
+    </select><br>
+    <label>Pontiff:</label>
+    <select id="pontiff">
+        <option value=0>0</option>
+        <option value=1>1</option>
+    </select><br>
+    <label>Thief:</label>
+    <select id="thief">
+        <option value=0>0</option>
+        <option value=1>1</option>
+    </select><br>
+    <label>Tower:</label>
+    <select id="tower">
+        <option value=0>0</option>
+        <option value=1>1</option>
+    </select><br>
+    <div id = "rank2Label">Rank II Pieces Left: 6</div>
+</div>
 
-    <div class="column">
-        <h3>Rank III selection:</h3>
-        <label>Queen:</label>
-        <select name="queen">
-            <option value=0>0</option>
-            <option value=1>1</option>
-        </select><br>
-        <label>King:</label>
-        <select name="king">
-            <option value=0>0</option>
-            <option value=1>1</option>
-        </select><br>
-        <label>Jester:</label>
-        <select name="jester">
-            <option value=0>0</option>
-            <option value=1>1</option>
-        </select><br>
-        <label>Regent:</label>
-        <select name="regent">
-            <option value=0>0</option>
-            <option value=1>1</option>
-        </select><br>
-    </div>
+<div class="column">
+    <h3>Rank III selection:</h3>
+    <label>Queen:</label>
+    <select id="queen">
+        <option value=0>0</option>
+        <option value=1>1</option>
+    </select><br>
+    <label>King:</label>
+    <select id="king">
+        <option value=0>0</option>
+        <option value=1>1</option>
+    </select><br>
+    <label>Jester:</label>
+    <select id="jester">
+        <option value=0>0</option>
+        <option value=1>1</option>
+    </select><br>
+    <label>Regent:</label>
+    <select id="regent">
+        <option value=0>0</option>
+        <option value=1>1</option>
+    </select><br>
+    <div id = "rank3Label">Rank III Pieces Left: 2</div>
+</div>
 
-    <div class="column">
-        <h3>Difficulty:</h3>
-        <select name="difficulty">
-            <option value="Beginner">Beginner</option>
-            <option value="Intermediate">Intermediate</option>
-            <option value="Advanced">Advanced</option>
-        </select>
-    </div>
+<div class="column">
+    <h3>Difficulty:</h3>
+    <select id="difficulty">
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+    </select>
+    <br>
+    <input type="button" id="calculateButton" value="Calculate Points">
+</div>
 
-    <br style="clear: both;"><br>
+<div id="scoreContainer">
 
-    <input type="submit" value="Calculate Points">
-</form>
+</div>
+
+<script>
+    function updateRank1Pieces() {
+        var pawnValue = parseInt(document.getElementById('pawn').value);
+        var soldierValue = parseInt(document.getElementById('soldier').value);
+        var peasantValue = parseInt(document.getElementById('peasant').value);
+
+        var totalRank1Pieces = pawnValue + peasantValue + soldierValue;
+        var maxRank1Pieces =  8;
+
+        var rank1Label = document.getElementById('rank1Label');
+        rank1Label.innerText = "Rank I Pieces Left: " + (maxRank1Pieces - totalRank1Pieces);
+
+    }
+
+    document.getElementById('pawn').addEventListener('change', updateRank1Pieces);
+    document.getElementById('peasant').addEventListener('change', updateRank1Pieces);
+    document.getElementById('soldier').addEventListener('change', updateRank1Pieces);
+
+    function updateRank2Pieces() {
+        var rookValue = parseInt(document.getElementById('rook').value);
+        var bishopValue = parseInt(document.getElementById('bishop').value);
+        var knightValue = parseInt(document.getElementById('knight').value);
+        var chamberlainValue = parseInt(document.getElementById('chamberlain').value);
+        var courtesanValue = parseInt(document.getElementById('courtesan').value);
+        var catapultValue = parseInt(document.getElementById('catapult').value);
+        var heraldValue = parseInt(document.getElementById('herald').value);
+        var inquisitorValue = parseInt(document.getElementById('inquisitor').value);
+        var lancerValue = parseInt(document.getElementById('lancer').value);
+        var pontiffValue = parseInt(document.getElementById('pontiff').value);
+        var thiefValue = parseInt(document.getElementById('thief').value);
+        var towerValue = parseInt(document.getElementById('tower').value);
+
+        var totalRank2Pieces = rookValue + bishopValue + knightValue + chamberlainValue + courtesanValue +
+            catapultValue + heraldValue + inquisitorValue + lancerValue + pontiffValue + thiefValue + towerValue;
+        var maxRank2Pieces =  6;
+
+        var rank2Label = document.getElementById('rank2Label');
+        rank2Label.innerText = "Rank II Pieces Left: " + (maxRank2Pieces - totalRank2Pieces);
+
+    }
+
+    document.getElementById('rook').addEventListener('change', updateRank2Pieces);
+    document.getElementById('bishop').addEventListener('change', updateRank2Pieces);
+    document.getElementById('knight').addEventListener('change', updateRank2Pieces);
+    document.getElementById('catapult').addEventListener('change', updateRank2Pieces);
+    document.getElementById('courtesan').addEventListener('change', updateRank2Pieces);
+    document.getElementById('chamberlain').addEventListener('change', updateRank2Pieces);
+    document.getElementById('herald').addEventListener('change', updateRank2Pieces);
+    document.getElementById('inquisitor').addEventListener('change', updateRank2Pieces);
+    document.getElementById('lancer').addEventListener('change', updateRank2Pieces);
+    document.getElementById('pontiff').addEventListener('change', updateRank2Pieces);
+    document.getElementById('thief').addEventListener('change', updateRank2Pieces);
+    document.getElementById('tower').addEventListener('change', updateRank2Pieces);
+
+    function updateRank3Pieces() {
+        var queenValue = parseInt(document.getElementById('queen').value);
+        var jesterValue = parseInt(document.getElementById('jester').value);
+        var kingValue = parseInt(document.getElementById('king').value);
+        var regentValue = parseInt(document.getElementById('regent').value);
+
+
+        var totalRank3Pieces = queenValue + jesterValue + kingValue + regentValue;
+        var maxRank3Pieces =  2;
+
+        var rank3Label = document.getElementById('rank3Label');
+        rank3Label.innerText = "Rank III Pieces Left: " + (maxRank3Pieces - totalRank3Pieces);
+
+    }
+
+    document.getElementById('queen').addEventListener('change', updateRank3Pieces);
+    document.getElementById('king').addEventListener('change', updateRank3Pieces);
+    document.getElementById('jester').addEventListener('change', updateRank3Pieces);
+    document.getElementById('regent').addEventListener('change', updateRank3Pieces);
+
+
+    document.getElementById('calculateButton').addEventListener('click', function() {
+        var pawnValue = parseInt(document.getElementById('pawn').value);
+        var soldierValue = parseInt(document.getElementById('soldier').value);
+        var peasantValue = parseInt(document.getElementById('peasant').value);
+        var rookValue = parseInt(document.getElementById('rook').value);
+        var bishopValue = parseInt(document.getElementById('bishop').value);
+        var knightValue = parseInt(document.getElementById('knight').value);
+        var chamberlainValue = parseInt(document.getElementById('chamberlain').value);
+        var courtesanValue = parseInt(document.getElementById('courtesan').value);
+        var catapultValue = parseInt(document.getElementById('catapult').value);
+        var heraldValue = parseInt(document.getElementById('herald').value);
+        var inquisitorValue = parseInt(document.getElementById('inquisitor').value);
+        var lancerValue = parseInt(document.getElementById('lancer').value);
+        var pontiffValue = parseInt(document.getElementById('pontiff').value);
+        var thiefValue = parseInt(document.getElementById('thief').value);
+        var towerValue = parseInt(document.getElementById('tower').value);
+        var queenValue = parseInt(document.getElementById('queen').value);
+        var jesterValue = parseInt(document.getElementById('jester').value);
+        var kingValue = parseInt(document.getElementById('king').value);
+        var regentValue = parseInt(document.getElementById('regent').value);
+
+        var difficulty = document.getElementById('difficulty').value;
+        var difficulties = {
+            "Beginner": 65,
+            "Intermediate": 70,
+            "Advanced": 75
+        };
+
+        var totalPoints = pawnValue * 1 +
+            peasantValue * 2 +
+            soldierValue * 3 +
+            rookValue * 9 +
+            knightValue * 4 +
+            bishopValue * 6 +
+            catapultValue * 3 +
+            chamberlainValue * 6 +
+            courtesanValue * 6 +
+            heraldValue * 6 +
+            inquisitorValue * 8 +
+            lancerValue * 5 +
+            pontiffValue * 8 +
+            thiefValue * 5 +
+            towerValue * 10 +
+            queenValue * 12 +
+            kingValue * 0 +
+            jesterValue * 12 +
+            regentValue * 15;
+
+        var remainingPoints = difficulties[difficulty] - totalPoints;
+
+        var scoreContainer = document.getElementById('scoreContainer');
+        scoreContainer.innerHTML = "<br>Total points: " + totalPoints + "<br>Remaining points: " + remainingPoints;
+    });
+</script>
 </body>
 </html>
