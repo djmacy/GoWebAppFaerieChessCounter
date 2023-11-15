@@ -5,13 +5,13 @@
     <link rel="stylesheet" type="text/css" href="/static/styles.css">
     <script src="/static/script.js"></script>
 </head>
-<body onload="onLoad()">
+<body onload="onLoad(); loadSelections()">
 <h1>Faerie Chess Counter</h1>
 <form action="/result" method="POST">
     <div class="column">
         <h3>Rank I selection:</h3>
         <label>Pawns:</label>
-        <select id="pawn" name="pawn">
+        <select id="pawn" name="pawn" onchange="saveSelections()">
             <option value=4>4</option>
             <option value=5>5</option>
             <option value=6>6</option>
@@ -19,13 +19,13 @@
             <option value=8>8</option>
         </select><br>
         <label>Peasants:</label>
-        <select id="peasant" name="peasant">
+        <select id="peasant" name="peasant" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
             <option value=2>2</option>
         </select><br>
         <label>Soldiers:</label>
-        <select id="soldier" name="soldier">
+        <select id="soldier" name="soldier" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
             <option value=2>2</option>
@@ -35,65 +35,65 @@
     <div class="column">
         <h3>Rank II selection:</h3>
         <label>Rooks:</label>
-        <select id="rook" name="rook">
+        <select id="rook" name="rook" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
             <option value=2>2</option>
         </select><br>
         <label>Knights:</label>
-        <select id="knight" name="knight">
+        <select id="knight" name="knight" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
             <option value=2>2</option>
         </select><br>
         <label>Bishops:</label>
-        <select id="bishop" name="bishop">
+        <select id="bishop" name="bishop" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
             <option value=2>2</option>
         </select><br>
         <label>Catapult:</label>
-        <select id="catapult" name="catapult">
+        <select id="catapult" name="catapult" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Chamberlain:</label>
-        <select id="chamberlain" name="chamberlain">
+        <select id="chamberlain" name="chamberlain" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Courtesan:</label>
-        <select id="courtesan" name="courtesan">
+        <select id="courtesan" name="courtesan" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Herald:</label>
-        <select id="herald" name="herald">
+        <select id="herald" name="herald" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Inquisitor:</label>
-        <select id="inquisitor" name="inquisitor">
+        <select id="inquisitor" name="inquisitor" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Lancer:</label>
-        <select id="lancer" name="lancer">
+        <select id="lancer" name="lancer" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Pontiff:</label>
-        <select id="pontiff" name="pontiff">
+        <select id="pontiff" name="pontiff" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Thief:</label>
-        <select id="thief" name="thief">
+        <select id="thief" name="thief" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Tower:</label>
-        <select id="tower" name="tower">
+        <select id="tower" name="tower" onchange="saveSelections()">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
