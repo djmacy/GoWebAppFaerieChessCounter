@@ -90,18 +90,6 @@ function loadSelections() {
     document.getElementById('tower').value = localStorage.getItem('tower') || '0';
     document.getElementById('king').value = localStorage.getItem('king') || 'King';
     document.getElementById('queen').value = localStorage.getItem('queen') || 'Queen';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+

@@ -103,12 +103,12 @@
     <div class="column">
         <h3>Rank III selection:</h3>
         <label>Queen or Jester:</label>
-        <select id="queen" name="queen">
+        <select id="queen" name="queen" onchange="saveSelections()">
             <option value="Queen">Queen</option>
             <option value="Jester">Jester</option>
         </select><br>
         <label>King or Regent:</label>
-        <select id="king" name="king">
+        <select id="king" name="king" onchange="saveSelections()">
             <option King="King">King</option>
             <option value="Regent">Regent</option>
         </select><br>
