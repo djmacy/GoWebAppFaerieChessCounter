@@ -7,11 +7,11 @@
 </head>
 <body onload="onLoad()">
 <h1>Faerie Chess Counter</h1>
-<form action="/calculate" method="POST">
+<form action="/result" method="POST">
     <div class="column">
         <h3>Rank I selection:</h3>
         <label>Pawns:</label>
-        <select id="pawn">
+        <select id="pawn" name="pawn">
             <option value=4>4</option>
             <option value=5>5</option>
             <option value=6>6</option>
@@ -19,13 +19,13 @@
             <option value=8>8</option>
         </select><br>
         <label>Peasants:</label>
-        <select id="peasant">
+        <select id="peasant" name="peasant">
             <option value=0>0</option>
             <option value=1>1</option>
             <option value=2>2</option>
         </select><br>
         <label>Soldiers:</label>
-        <select id="soldier">
+        <select id="soldier" name="soldier">
             <option value=0>0</option>
             <option value=1>1</option>
             <option value=2>2</option>
@@ -35,65 +35,65 @@
     <div class="column">
         <h3>Rank II selection:</h3>
         <label>Rooks:</label>
-        <select id="rook">
+        <select id="rook" name="rook">
             <option value=0>0</option>
             <option value=1>1</option>
             <option value=2>2</option>
         </select><br>
         <label>Knights:</label>
-        <select id="knight">
+        <select id="knight" name="knight">
             <option value=0>0</option>
             <option value=1>1</option>
             <option value=2>2</option>
         </select><br>
         <label>Bishops:</label>
-        <select id="bishop">
+        <select id="bishop" name="bishop">
             <option value=0>0</option>
             <option value=1>1</option>
             <option value=2>2</option>
         </select><br>
         <label>Catapult:</label>
-        <select id="catapult">
+        <select id="catapult" name="catapult">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Chamberlain:</label>
-        <select id="chamberlain">
+        <select id="chamberlain" name="chamberlain">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Courtesan:</label>
-        <select id="courtesan">
+        <select id="courtesan" name="courtesan">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Herald:</label>
-        <select id="herald">
+        <select id="herald" name="herald">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Inquisitor:</label>
-        <select id="inquisitor">
+        <select id="inquisitor" name="inquisitor">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Lancer:</label>
-        <select id="lancer">
+        <select id="lancer" name="lancer">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Pontiff:</label>
-        <select id="pontiff">
+        <select id="pontiff" name="pontiff">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Thief:</label>
-        <select id="thief">
+        <select id="thief" name="thief">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
         <label>Tower:</label>
-        <select id="tower">
+        <select id="tower" name="tower">
             <option value=0>0</option>
             <option value=1>1</option>
         </select><br>
@@ -103,14 +103,14 @@
     <div class="column">
         <h3>Rank III selection:</h3>
         <label>Queen or Jester:</label>
-        <select id="queen">
-            <option value=0>Queen</option>
-            <option value=1>Jester</option>
+        <select id="queen" name="queen">
+            <option value="Queen">Queen</option>
+            <option value="Jester">Jester</option>
         </select><br>
         <label>King or Regent:</label>
-        <select id="king">
-            <option value=0>King</option>
-            <option value=1>Regent</option>
+        <select id="king" name="king">
+            <option King="King">King</option>
+            <option value="Regent">Regent</option>
         </select><br>
         <div id="rank3Label">Rank III Pieces Left: 0</div>
     </div>
